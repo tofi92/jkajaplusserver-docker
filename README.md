@@ -1,5 +1,8 @@
-# Jedi Knight - Jedi Academy Dedicated Server & JA+
+# Jedi Knight - Jedi Academy Server with OpenJK & JA++ in Docker
 
+This is a quick modification of tofi92's original Docker image to use OpenJK and JA++ (instead of the vanilla dedicated server and JK+ respectively).
+
+Should work with vanilla/OpenJK/EternalJK clients.
 
 **!!You need the original asset files for this to work!!**
 
@@ -40,5 +43,5 @@ I tested this with 3 friends on a server and noticed nothing out of the ordinary
 - Exposes UDP port 29070. You can map this to any port, though you need to specify any different port when you add this server to your favorites.
 
 Files used: 
-- https://jkhub.org/files/file/953-ja-server-side/
-- https://jkhub.org/files/file/390-jedi-academy-dedicated-server-for-linux/
+- https://japplus.github.io/site/dl/sv_bins_linux32.zip
+- https://builds.openjk.org/openjk-2018-02-26-e3f22070-linux.tar.gz
