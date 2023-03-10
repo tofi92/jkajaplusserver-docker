@@ -8,6 +8,7 @@ RUN mkdir ja \
 && tar -xzf openjk-2018-02-26-e3f22070-linux.tar.gz --directory ja \
 && mv ja/install/JediAcademy/* ja/ \
 && rm -r ja/install \
+&& mv ja/base ja/base_original \
 && rm openjk-2018-02-26-e3f22070-linux.tar.gz \
 && wget https://japplus.github.io/site/dl/sv_bins_linux32.zip \
 && unzip sv_bins_linux32.zip -d ja/japlus \
@@ -15,9 +16,10 @@ RUN mkdir ja \
 WORKDIR /ja
 COPY ["start_server.sh", "start_server.sh"]
 RUN chmod a+x openjkded.i386 \
-&& mkdir japluscfg && mkdir assets \
 && chmod a+x start_server.sh
 COPY ["start_japlus_linux_autoRestart.sh", "start_japlus_linux_autoRestart.sh"]
 RUN chmod a+x start_japlus_linux_autoRestart.sh
+
+#VOLUME ["/ja/base", "/ja/japluscfg"]
 
 CMD ["./start_server.sh"]
