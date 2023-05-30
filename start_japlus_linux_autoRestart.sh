@@ -21,10 +21,10 @@ if [ $alive -eq 0 ]
 then
      
      	lastrestart=`/bin/date`;
-	echo "JA++ server restarted on $lastrestart" > ./japlus_restart.txt ;        
+	echo "JA++ server restarted on $lastrestart" ;        
        
 
-	nohup ./openjkded.i386 +set dedicated 2  +set fs_game japlus +exec server.cfg > echo;
+	nohup ./openjkded.i386 +set dedicated 2 +set fs_game japlus +exec server.cfg > echo;
    	      
           
 
